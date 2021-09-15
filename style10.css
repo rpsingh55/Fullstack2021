@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0 5px 5px 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+  display: flex;
+  background-color: rgb(101, 211, 255);
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.header img{
+    width: 5%;
+    height: 5%;
+    align-self: center;
+}
+.header h1{
+    color: white;
+    text-align: center;
+    line-height: 80px;
+}
+.body{
+    display:flex;
+    justify-content: center;
+}
+.image{
+    border-radius: 10px;
+    margin: 10px;
+    /* width: 30%;
+    height: 30%; */
+    position: relative;
+    top: 110px;
+    /* left: 10%; */
+    /* float: right; */
+}
+.lorem{
+    padding: 20px;
+    text-align: justify;
+    color: #35999b;
+    /* width: 95%; */
+    /* float: right; */
+    /* left: 22%; */
+    top: 430px;
+    position: absolute;
+}
+.sidebar{
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 108px;
+    background-color:rgb(101, 211, 255);
+    border-radius: 5px;
+    float: left;
+    left: -100%;
+    transition: .7s;
+}
+.sidebar ul{
+    list-style: none;
+}
+.sidebar ul li{
+    border-bottom: 2px solid white;
+}
+.sidebar ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px 25px;
+    transition: .4s;
+    justify-content: center;
+}
+.sidebar ul li a span{
+    margin-left: 15px;
+}
+.sidebar ul li a i:hover{
+    color:black;
+}
+.show-btn, .hide-btn{
+    font-size: 30px;
+    color: white;
+    position: fixed;
+    top: 20px;
+    left: 50px;
+    z-index: 2;
+    justify-content: center;
+    line-height: 70px;
+}
+.hide-btn{
+    opacity: 0;
+}
+#chk{
+    opacity: 0;
+}
+#chk:checked ~ .sidebar{
+    left:10px;
+} 
+#chk:checked ~ .show-btn{
+    opacity:0;
+} 
+#chk:checked ~ .hide-btn{
+    transition: .7s;
+    opacity:1;
+} 
+#chk:checked ~ .sidebar{
+    left:10px;
+} 
+#chk:checked ~ .sidebar{
+    left:10px;
+} 
+
+@media(max-width:700px){
+.sidebar{
+        width: 100%;
+        left:-100%;
+        text-align: center;
+ }
+ .header{
+     height: 100px;
+     margin:0;
+     padding: 0;
+ }
+ .header img{
+     height: 100px;
+     width: 200px;
+ }
+.header h1{
+        display: none;
+    }
+#chk:checked ~ .sidebar{
+        left:0%;
+    }
+.image{
+        height: 280px;
+        width: 300px;
+    }
+}
